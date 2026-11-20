@@ -63,3 +63,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+/* =========================================
+   DROPDOWN KONSULTASI NAVBAR
+========================================= */
+
+const consultationToggle = document.getElementById("consultationToggle");
+const consultationDropdown = document.getElementById("consultationDropdown");
+
+if (consultationToggle && consultationDropdown) {
+
+    consultationToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        consultationDropdown.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".consultation-menu")) {
+            consultationDropdown.classList.remove("active");
+        }
+    });
+
+}

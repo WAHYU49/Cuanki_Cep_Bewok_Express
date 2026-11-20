@@ -1531,3 +1531,77 @@ h3 {
         aspect-ratio: 4 / 3;
     }
 }
+
+
+/* =========================================
+   DROPDOWN KONSULTASI NAVBAR
+========================================= */
+
+.consultation-menu {
+    position: relative;
+}
+
+.consultation-toggle {
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.consultation-toggle span {
+    margin-left: 5px;
+    font-size: 11px;
+}
+
+.consultation-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 235px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    z-index: 1100;
+}
+
+.consultation-dropdown.active {
+    display: grid;
+}
+
+.consultation-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 9px;
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.consultation-dropdown a:hover {
+    background: var(--cream);
+    color: var(--red);
+}
+
+/* Tampilan HP */
+@media (max-width: 760px) {
+    .consultation-menu {
+        width: 100%;
+    }
+
+    .consultation-toggle {
+        width: 100%;
+        text-align: center;
+    }
+
+    .consultation-dropdown {
+        position: static;
+        width: 100%;
+        margin-top: 8px;
+        box-shadow: none;
+    }
+}
+
